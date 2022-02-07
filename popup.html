@@ -1,36 +1,35 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-      <style>
-		body {
-			border-radius: 25px;
-			background-color: #dddddd;
-		}
-        button {
-    		height: 20px;
-        	width: 150px;
-        	outline: none;
-			background-color: #827ffe;
-			border-radius: 25px;
-			color: #ffffff;
-        }
-      </style>
-    </head>
-    <body>
-		<div style="border: 1px black solid; margin: 0px 0px">
-			<h3 style="padding: 0px 5px" >Select news anywhere on the page to know if it is authentic or fake</h3>
-			<input type="text" id="search-text">
-			<button id="send" onclick="searchfun()"><b>Search</b></button>
-		</div>
-		<br>
-		<button id="sendText"><b>Go</b></button>
-		<script src="popup.js"></script>
-		<script>
-			let val = document.getElementById('search-text').value;
-			function searchfun () {
-				console.log(document.getElementById('search-text').value)
-			}
-
-		</script>
-    </body>
-  </html>
+<html>
+  <head>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'sha256-WOdSzz11/3cpqOdrm89LBL2UPwEU9EhbDtMy2OciEhs='"
+    />
+    <style>
+      body {
+        border-radius: 25px;  
+        background-color: #dddddd;
+      }
+      button {
+        height: 25px;
+        width: 150px;
+        outline: none;
+        background-color: #827ffe;
+        border-radius: 25px;
+        color: #ffffff;
+        margin-top: 10px;
+      }
+      .maind{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="maind">
+      <h1>Container for popup ext</h1>
+      <input type="text" id="input" value="" />
+      <button onclick="send()" id="send">Send</button>
+    </div>
+  </body>
+  <script src="click.js" type="text/javascript"></script>
+</html>
